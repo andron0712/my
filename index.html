@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація на подію</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100dvh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background-color: #f5f5f5;
+            color: #333;
+            text-align: center;
+            padding: 50px 0;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        main {
+            flex-grow: 1;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            font-size: 18px;
+        }
+        input, select, textarea {
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+        }
+        button {
+            padding: 12px;
+            font-size: 18px;
+            background: #008cff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Реєстрація на подію</h1>
+    </header>
+
+    <main>
+        <h2>Заповніть форму</h2>
+
+        <form>
+
+            <!-- 3. Поле імені -->
+            <label>
+                Ім'я:
+                <input type="text" placeholder="Введіть ваше ім’я" required>
+            </label>
+
+            <!-- 3. Поле email -->
+            <label>
+                Електронна пошта:
+                <input type="email" placeholder="example@gmail.com" required>
+            </label>
+
+            <!-- 4. Телефон -->
+            <label>
+                Номер телефону:
+                <input type="tel" placeholder="+380..." required>
+            </label>
+
+            <!-- 5. Список типу квитка -->
+            <label>
+                Тип квитка:
+                <select required>
+                    <option value="standard">Звичайний</option>
+                    <option value="vip">VIP</option>
+                    <option value="student">Студентський</option>
+                </select>
+            </label>
+
+            <!-- 6. Додаткові послуги -->
+            <fieldset>
+                <legend>Додаткові послуги:</legend>
+
+                <label><input type="checkbox" value="food"> Харчування</label>
+                <label><input type="checkbox" value="transfer"> Трансфер</label>
+            </fieldset>
+
+            <!-- 7. Побажання -->
+            <label>
+                Спеціальні побажання:
+                <textarea rows="4" placeholder="Ваші побажання..."></textarea>
+            </label>
+
+            <!-- 8. Спосіб оплати -->
+            <fieldset>
+                <legend>Спосіб оплати:</legend>
+
+                <label><input type="radio" name="pay" value="card" required> Картка</label>
+                <label><input type="radio" name="pay" value="cash"> Готівка</label>
+            </fieldset>
+
+            <!-- 9. Підтвердження -->
+            <label>
+                <input type="checkbox" required>
+                Погоджуюся з правилами участі
+            </label>
+
+            <!-- 10. Кнопка -->
+            <button type="submit">Завершити реєстрацію</button>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Компанія. Всі права захищені.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec sem et eros luctus dignissim.</p>
+    </footer>
+
+</body>
+</html>
